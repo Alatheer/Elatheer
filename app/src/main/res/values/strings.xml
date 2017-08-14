@@ -13,4 +13,5 @@
     <string name="offer">عروضنا</string>
     <string name="call">عن الشركه</string>
     <string name="home">الرئيسيه</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
