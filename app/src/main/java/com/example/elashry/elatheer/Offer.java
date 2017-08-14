@@ -46,7 +46,7 @@ public class Offer extends AppCompatActivity {
             switch (position % 5) {
                 case 0 : holder.T.setText("خصم 50% علي عروضنا في تصاميم المواقع "); break;
                 case 1 : holder.T.setText("خصم يصل إلى (20%) من للمؤسسات الجديدة"); break;
-                case 2 : holder.T.setText("نقدم لكم أرقي التصميمات التى تناسب جميع الأجهزة"); break;
+                case 2 : holder.T.setText("أرقي التصميمات التى تناسب جميع الأجهزة"); break;
                 case 3 : holder.T.setText("خصم يصل إلى (20%) من للمؤسسات الجديدة"); break;
                 case 4 : holder.T.setText("خصم 50% علي عروضنا في تصاميم المواقع"); break;
             }

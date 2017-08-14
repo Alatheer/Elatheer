@@ -3,13 +3,13 @@
     android:padding="3dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/amber_400">
+    android:background="@color/colorPrimary">
 
     <com.gjiazhe.scrollparallaximageview.ScrollParallaxImageView
         android:id="@+id/img"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/pic1"
+        android:src="@drawable/img1"
         android:scaleType="centerCrop"/>
 
 </LinearLayout>

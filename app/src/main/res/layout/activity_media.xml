@@ -4,12 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.gjiazhe.scrollparallaximageview.sample.HorizontalSampleActivity">
+    tools:context=".media">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/amber_400">
         <TextView
             android:id="@+id/T"
             android:layout_width="match_parent"
@@ -26,6 +27,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_horizontal_moving"
             android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
             android:layout_height="wrap_content" />
           <TextView
         android:id="@+id/Tjhj"
@@ -47,6 +49,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_horizontal_scale"
             android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/jjjT"
@@ -65,6 +68,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_horizontal_alpha"
             android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
             android:layout_height="wrap_content" />
     </LinearLayout>
 </ScrollView>

@@ -18,8 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Services"></activity>
-
+        <activity android:name=".Services" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Programs" android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".CallUs" />
         <activity android:name=".About" />
         <activity android:name=".Offer" />
