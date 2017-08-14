@@ -26,6 +26,8 @@ public class Services extends AppCompatActivity {
                 switch (menuButton.getId()) {
                     case R.id.Program:
                         showMessage("Program");
+                        Intent i=new Intent(Services.this,Programs.class);
+                        startActivity(i);
                         break;
                     case R.id.adv:
                         showMessage("adv");
@@ -37,6 +39,8 @@ public class Services extends AppCompatActivity {
                         showMessage("fhrsa");
                         break;
                     case R.id.camera:
+                        Intent ic=new Intent(Services.this,Camera.class);
+                        startActivity(ic);
                         showMessage("camera");
                         break;
                 }

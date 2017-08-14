@@ -1,0 +1,84 @@
+<ScrollView android:layout_width="match_parent"     android:background="@color/amber_400"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.elashry.elatheer.Mobile">
+
+    <!-- TODO: Update blank fragment layout -->
+
+<LinearLayout
+    android:layout_margin="5dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <com.github.siyamed.shapeimageview.BubbleImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/eng1"
+        app:siArrowPosition="right"
+        app:siRadius="6dp"
+        app:siBorderWidth="6dp"
+        app:siBorderColor="@color/colorPrimary"
+        app:siSquare="true"/>
+    <TextView
+        android:layout_marginTop="65dp"
+        android:textSize="25dp"
+        android:textColor="@color/amber_400"
+        android:layout_width="wrap_content"
+        android:background="@drawable/back"
+        android:layout_height="wrap_content"
+        android:text="برنامج ادارة المخازن"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.github.siyamed.shapeimageview.BubbleImageView
+            android:layout_margin="5dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/eng1"
+            app:siArrowPosition="right"
+            app:siRadius="6dp"
+            app:siBorderWidth="6dp"
+            app:siBorderColor="@color/amber_400"
+            app:siSquare="true"/>
+        <TextView
+            android:layout_marginTop="65dp"
+            android:textSize="25dp"
+            android:textColor="@color/amber_400"
+            android:layout_width="wrap_content"
+            android:background="@drawable/back"
+            android:layout_height="wrap_content"
+            android:text="برنامج ادارة المخازن"/>
+    </LinearLayout>
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <com.github.siyamed.shapeimageview.BubbleImageView
+        android:layout_margin="5dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/eng1"
+        app:siArrowPosition="right"
+        app:siRadius="6dp"
+        app:siBorderWidth="6dp"
+        app:siBorderColor="@color/amber_400"
+        app:siSquare="true"/>
+    <TextView
+        android:layout_marginTop="65dp"
+        android:textSize="25dp"
+        android:textColor="@color/amber_400"
+        android:layout_width="wrap_content"
+        android:background="@drawable/back"
+        android:layout_height="wrap_content"
+        android:text="برنامج ادارة المخازن"/>
+</LinearLayout>
+</LinearLayout></ScrollView>
