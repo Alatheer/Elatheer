@@ -49,6 +49,7 @@ public class About extends AppCompatActivity {
                     }
                 });
 
+
                 popup.show(); //showing popup menu
             }
         });

@@ -10,7 +10,7 @@
         android:id="@+id/img"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:src="@drawable/pic1"
+        android:src="@drawable/img1"
         android:layout_margin="5dp"
         android:scaleType="centerCrop"/>
     <TextView
@@ -20,7 +20,6 @@
         android:layout_marginTop="160dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-
         android:gravity="center"
         android:text="50%  علي عروضنا في تصاميم المواقع "
         android:textColor="@color/colorPrimary"

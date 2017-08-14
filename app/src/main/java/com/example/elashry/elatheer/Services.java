@@ -44,6 +44,8 @@ public class Services extends AppCompatActivity {
                         showMessage("camera");
                         break;
                 }
+
+
             }
         });
 

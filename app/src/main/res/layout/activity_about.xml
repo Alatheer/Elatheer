@@ -279,6 +279,8 @@
                     android:text="السعودية" />
             </LinearLayout>
 
+
+
             <com.borjabravo.readmoretextview.ReadMoreTextView
                 android:id="@+id/call"
                 android:layout_width="match_parent"

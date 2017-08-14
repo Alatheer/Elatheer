@@ -10,4 +10,5 @@ public class CallUs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_call_us);
     }
+
 }

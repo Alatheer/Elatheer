@@ -19,4 +19,6 @@
     <string name="phone">Your Phone</string>
     <string name="message">Leave Your Message</string>
     <string name="title_activity_main">MainActivity</string>
+
+
 </resources>

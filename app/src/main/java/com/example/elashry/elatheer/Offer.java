@@ -52,6 +52,8 @@ public class Offer extends AppCompatActivity {
             }
 
 
+
+
         }
 
         @Override
