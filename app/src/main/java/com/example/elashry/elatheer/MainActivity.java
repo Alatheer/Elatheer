@@ -53,14 +53,27 @@ public class MainActivity extends AppCompatActivity {
         wheelView.setOnWheelItemClickListener(new WheelView.OnWheelItemClickListener() {
             @Override
             public void onWheelItemClick(WheelView parent, int position, boolean isSelected) {
-                String msg = String.valueOf(position) + " " + isSelected;
+                String msg = String.valueOf(position);
                 Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-                if (msg.equals("1")){
+                if (msg.equals("0")){
                     Intent i =new Intent(MainActivity.this,Services.class);
                     startActivity(i);
-                }else {
-                    Toast.makeText(MainActivity.this, "88", Toast.LENGTH_SHORT).show();
-
+                }else if (msg.equals("1")){
+                    Intent i =new Intent(MainActivity.this,Services.class);
+                    startActivity(i);
+                }else if (msg.equals("2")){
+                    Intent i =new Intent(MainActivity.this,Services.class);
+                    startActivity(i);
+                }else if (msg.equals("3")){
+                    Intent i =new Intent(MainActivity.this,Services.class);
+                    startActivity(i);
+                }else if (msg.equals("4")){
+                    Intent i =new Intent(MainActivity.this,Services.class);
+                    startActivity(i);
+                }else if (msg.equals("5")){
+                    Intent i =new Intent(MainActivity.this,Services.class);
+                    startActivity(i);
+                }else if (msg.equals("6")){
                     Intent i =new Intent(MainActivity.this,Services.class);
                     startActivity(i);
                 }
