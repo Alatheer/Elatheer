@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">الاثير</string>
+    <string name="service">خدمتنا</string>
+    <string name="offer">عروضنا</string>
+    <string name="call">عن الشركه</string>
+    <string name="home">الرئيسيه</string>
+
+    <string name="name">الاسم</string>
+    <string name="mail">البريد الالكتروني</string>
+    <string name="phone">الهاتف</string>
+    <string name="message">اترك رسالتك</string>
+</resources>

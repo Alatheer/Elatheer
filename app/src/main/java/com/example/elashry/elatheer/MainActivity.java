@@ -1,6 +1,5 @@
 package com.example.elashry.elatheer;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
@@ -62,16 +61,16 @@ public class MainActivity extends AppCompatActivity {
                     Intent i =new Intent(MainActivity.this,Services.class);
                     startActivity(i);
                 }else if (msg.equals("2")){
-                    Intent i =new Intent(MainActivity.this,Services.class);
+                    Intent i =new Intent(MainActivity.this,Offer.class);
                     startActivity(i);
                 }else if (msg.equals("3")){
-                    Intent i =new Intent(MainActivity.this,Services.class);
+                    Intent i =new Intent(MainActivity.this,About.class);
                     startActivity(i);
                 }else if (msg.equals("4")){
-                    Intent i =new Intent(MainActivity.this,Services.class);
+                    Intent i =new Intent(MainActivity.this,CallUs.class);
                     startActivity(i);
                 }else if (msg.equals("5")){
-                    Intent i =new Intent(MainActivity.this,Services.class);
+                    Intent i =new Intent(MainActivity.this,media.class);
                     startActivity(i);
                 }else if (msg.equals("6")){
                     Intent i =new Intent(MainActivity.this,Services.class);

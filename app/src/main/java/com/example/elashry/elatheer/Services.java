@@ -36,8 +36,8 @@ public class Services extends AppCompatActivity {
                         showMessage("design");
                         break;
                     case R.id.fhrsa:
-                        showMessage("fhrsa");
-                        break;
+                        Intent F=new Intent(Services.this,Fahrasa.class);
+                        startActivity(F);                        break;
                     case R.id.camera:
                         Intent ic=new Intent(Services.this,Camera.class);
                         startActivity(ic);

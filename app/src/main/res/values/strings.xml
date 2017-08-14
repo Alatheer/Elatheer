@@ -9,9 +9,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="service">خدمتنا</string>
-    <string name="offer">عروضنا</string>
-    <string name="call">عن الشركه</string>
-    <string name="home">الرئيسيه</string>
+    <string name="service">Service</string>
+    <string name="offer">Offer</string>
+    <string name="call">Call </string>
+    <string name="home">Home</string>
+
+    <string name="name">Your Name</string>
+    <string name="mail">Your Mail</string>
+    <string name="phone">Your Phone</string>
+    <string name="message">Leave Your Message</string>
     <string name="title_activity_main">MainActivity</string>
 </resources>

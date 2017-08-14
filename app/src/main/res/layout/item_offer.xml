@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    android:orientation="vertical"
+    android:background="@color/amber_400">
+
+    <com.gjiazhe.scrollparallaximageview.ScrollParallaxImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@drawable/pic1"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/T"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        android:gravity="center"
+        android:text="50%  علي عروضنا في تصاميم المواقع "
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:background="@drawable/button1"
+        android:textStyle="bold"/>
+</RelativeLayout>

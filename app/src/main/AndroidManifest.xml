@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.elashry.elatheer">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/alatheer"
@@ -20,11 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Services" />
-        <activity
-            android:name=".Programs"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Camera"></activity>
+        <activity android:name=".Services"></activity>
+
+        <activity android:name=".CallUs" />
+        <activity android:name=".About" />
+        <activity android:name=".Offer" />
+        <activity android:name=".media" />
+        <activity android:name=".Fahrasa" />
+
     </application>
 
 </manifest>
