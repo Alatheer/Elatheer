@@ -30,12 +30,9 @@ public class TextDrawable extends Drawable {
     @Override
     public void draw(Canvas canvas) {
         Rect bounds = getBounds();
-        String[] list = {"عروضنا", "عن الشركه", "خدمتنا", "اتصل بنا", "افكار مبتكره", "الرئيسيه"};
+        //String[] list = {"عروضنا", "عن الشركه", "خدمتنا", "اتصل بنا", "افكار مبتكره", "الرئيسيه"};
        // for (int i = 1; i < list.length; i++) {
-        if(text.equals("0")){
-            canvas.drawText("الرئيسيه", bounds.centerX() - 15f /*just a lazy attempt to centre the text*/ * text.length(), bounds.centerY() + 15f, paint);
-
-        }else if (text.equals("1")){
+       if (text.equals("1")){
             canvas.drawText("خدمتنا", bounds.centerX() - 15f /*just a lazy attempt to centre the text*/ * text.length(), bounds.centerY() + 15f, paint);
 
         }else if (text.equals("2")){
@@ -50,7 +47,7 @@ public class TextDrawable extends Drawable {
         }else if (text.equals("5")){
             canvas.drawText("افكار مبتكره", bounds.centerX() - 15f /*just a lazy attempt to centre the text*/ * text.length(), bounds.centerY() + 15f, paint);
 
-        }else if (text.equals("6")){
+        }else if (text.equals("0")){
             canvas.drawText("منتاجتنا", bounds.centerX() - 15f /*just a lazy attempt to centre the text*/ * text.length(), bounds.centerY() + 15f, paint);
 
         }

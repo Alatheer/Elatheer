@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="3dp"
     android:orientation="vertical"
     android:background="@color/amber_400">
@@ -10,8 +11,12 @@
         android:id="@+id/img"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:src="@drawable/img1"
+        android:src="@drawable/pic5"
         android:layout_margin="5dp"
+        app:siRadius="6dp"
+        app:siBorderWidth="4dp"
+        app:siBorderColor="@color/colorPrimary"
+        app:siSquare="false"
         android:scaleType="centerCrop"/>
     <TextView
         android:id="@+id/T"
@@ -21,9 +26,9 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:gravity="center"
-        android:text="50%  علي عروضنا في تصاميم المواقع "
-        android:textColor="@color/colorPrimary"
+        android:text="50%  علي عروضنا في تصاميم  "
+        android:textColor="@color/amber_400"
         android:textSize="20dp"
-        android:background="@drawable/button1"
+        android:background="@drawable/blubuttom"
         android:textStyle="bold"/>
 </RelativeLayout>

@@ -3,6 +3,8 @@
     package="com.example.elashry.elatheer">
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/alatheer"
@@ -28,6 +30,7 @@
         <activity android:name=".CallUs" />
         <activity android:name=".About" />
         <activity android:name=".Offer" />
+        <activity android:name=".Camera" />
         <activity android:name=".media" />
         <activity android:name=".Fahrasa" />
         <activity android:name=".idia"></activity>

@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int ITEM_COUNT = 7;
+    private static final int ITEM_COUNT = 6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
