@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent i =new Intent(MainActivity.this,CallUs.class);
                     startActivity(i);
                 }else if (msg.equals("5")){
-                    Intent i =new Intent(MainActivity.this,media.class);
+                    Intent i =new Intent(MainActivity.this,idia.class);
                     startActivity(i);
                 }else if (msg.equals("6")){
                     Intent i =new Intent(MainActivity.this,Services.class);

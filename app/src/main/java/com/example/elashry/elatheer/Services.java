@@ -1,11 +1,9 @@
 package com.example.elashry.elatheer;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Menu;
 import android.widget.Toast;
 
 import com.imangazaliev.circlemenu.CircleMenu;
@@ -33,11 +31,13 @@ public class Services extends AppCompatActivity {
                         showMessage("adv");
                         break;
                     case R.id.design:
-                        showMessage("design");
+                        Intent d = new Intent(Services.this, media.class);
+                        startActivity(d);
                         break;
                     case R.id.fhrsa:
                         Intent F=new Intent(Services.this,Fahrasa.class);
-                        startActivity(F);                        break;
+                        startActivity(F);
+                        break;
                     case R.id.camera:
                         Intent ic=new Intent(Services.this,Camera.class);
                         startActivity(ic);
