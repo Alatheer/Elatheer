@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="360dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp
+"
+            android:id="@+id/movieposteIMG"
+            android:src="@drawable/pic4"
+            app:siRadius="6dp"
+            app:siBorderWidth="4dp"
+            app:siBorderColor="@color/colorPrimary"
+            app:siSquare="false"/>
+
+
+
+            <TextView
+                android:id="@+id/movietitleTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Bajrang Bhaijaan"
+                android:textColor="@color/amber_500"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/movieratTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="10dp"
+                android:text="(9.9/10)"
+                android:textColor="@color/amber_50"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/moviedescTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="الالبانالالبانالالبانالالبانالالبان "
+                android:textColor="@color/amber_200"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+
+</LinearLayout>
