@@ -15,7 +15,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/amber_400"
-        >
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true">
 
         <TextView
             android:layout_width="wrap_content"
