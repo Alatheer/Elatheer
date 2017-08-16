@@ -28,8 +28,9 @@ public class Services extends AppCompatActivity {
                         startActivity(i);
                         break;
                     case R.id.adv:
-                        showMessage("adv");
-                        break;
+
+                        Intent m = new Intent(Services.this, WhyAtheer.class);
+                        startActivity(m);                        break;
                     case R.id.design:
                         Intent d = new Intent(Services.this, media.class);
                         startActivity(d);
