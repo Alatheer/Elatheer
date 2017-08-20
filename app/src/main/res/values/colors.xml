@@ -257,9 +257,9 @@
         <!-- AMBER -->
         <color name="amber_50">#fff8e1</color>
         <color name="amber_100">#ffecb3</color>
-        <color name="amber_200">#ffe082</color>
+        <color name="amber_200">#94ded7</color>
         <color name="amber_300">#ffd54f</color>
-        <color name="amber_400">#ffca28</color>
+        <color name="amber_400">#80cbc4</color>
         <color name="amber_500">#ffc107</color>
         <color name="amber_600">#ffb300</color>
         <color name="amber_700">#ffa000</color>

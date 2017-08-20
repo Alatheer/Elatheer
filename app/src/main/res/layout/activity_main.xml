@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/amber_200"
+    android:background="@drawable/b5"
     tools:context="com.example.elashry.elatheer.MainActivity">
 
 
@@ -22,10 +22,12 @@
         app:wheelPadding="5dp"
         app:wheelItemRadius="43dp"/>
     <ImageView
-        android:layout_marginTop="170dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/alatheer"/>
+        android:src="@drawable/alatheer"
+
+        android:layout_gravity="left|center_vertical"
+        />
 
 
 
