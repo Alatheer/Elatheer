@@ -23,40 +23,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:src="@drawable/fhrs"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/jjjT"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:layout_marginTop="2dp"
-            android:gravity="center"
-            android:text="نبذة عن الخدمه "
-            android:background="@drawable/blubuttom"
-            android:textColor="@color/amber_400"
-            android:textSize="20dp"
-            android:layout_margin="5dp"
-            android:textStyle="bold"
-            />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="@color/colorPrimary"
-            android:layout_margin="5dp"
-            android:text=" تفاصيل الخدمه تفاصيل الخدمه تفاصيل الخدمه تفاصيل الخدمه تفاصيل الخدمه تفاصيل الخدمهتفاصيل الخدمه تفاصيل الخدمه تفاصيل الخدمه تفاصيل الخدمه تفاصيل الخدمه تفاصيل الخدمه تفاصيل الخدمه تفاصيل الخدمه تفاصيل الخدمه تفاصيل الخدمه" />
-    </LinearLayout>
-
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimary"
+                android:layout_height="match_parent" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -1,74 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Activites.media">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/amber_400">
-        <TextView
-            android:id="@+id/T"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:layout_marginTop="2dp"
-            android:gravity="center"
-            android:text="تصميم بوسترات "
-            android:background="@drawable/button1"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20dp"
-            android:textStyle="bold"
-           />
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_horizontal_moving"
-            android:layout_width="match_parent"
-            android:background="@color/colorPrimary"
-            android:layout_height="wrap_content" />
-          <TextView
-        android:id="@+id/Tjhj"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:layout_marginTop="2dp"
-        android:gravity="center"
-        android:text="تصميم كروت "
-        android:background="@drawable/button1"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        />
-
-
-
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_horizontal_scale"
-            android:layout_width="match_parent"
-            android:background="@color/colorPrimary"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/jjjT"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:layout_marginTop="2dp"
-            android:gravity="center"
-            android:text="تصميم منيوهات "
-            android:background="@drawable/button1"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            />
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_horizontal_alpha"
-            android:layout_width="match_parent"
-            android:background="@color/colorPrimary"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-</ScrollView>
+        android:background="@color/colorPrimary"
+        android:layout_height="match_parent" />
+</RelativeLayout>

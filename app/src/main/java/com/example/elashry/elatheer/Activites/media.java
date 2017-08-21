@@ -1,75 +1,81 @@
 package com.example.elashry.elatheer.Activites;
 
-import android.os.Bundle;
+
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.example.elashry.elatheer.Adapters.AdapterDept;
+import com.example.elashry.elatheer.Adapters.Adapteroffer;
+import com.example.elashry.elatheer.Models.DesignModel;
+import com.example.elashry.elatheer.Models.NewsFeeds;
+import com.example.elashry.elatheer.NetworkController;
 import com.example.elashry.elatheer.R;
-import com.gjiazhe.scrollparallaximageview.ScrollParallaxImageView;
-import com.gjiazhe.scrollparallaximageview.parallaxstyle.HorizontalAlphaStyle;
-import com.gjiazhe.scrollparallaximageview.parallaxstyle.HorizontalMovingStyle;
-import com.gjiazhe.scrollparallaximageview.parallaxstyle.HorizontalScaleStyle;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class media extends AppCompatActivity {
+
+    RequestQueue queue;
+    String url = "https://alatheertech.com/api/find/department_services";
+    RecyclerView recyclerView;
+    List<DesignModel> designList = new ArrayList<DesignModel>();
+    AdapterDept adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_media);
-        RecyclerView rvMoving = (RecyclerView) findViewById(R.id.rv_horizontal_moving);
-        RecyclerView rvScale = (RecyclerView) findViewById(R.id.rv_horizontal_scale);
-        RecyclerView rvAlpha = (RecyclerView) findViewById(R.id.rv_horizontal_alpha);
+        setContentView(R.layout.activity_offer);
+        //Initialize RecyclerView
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        adapter = new AdapterDept(this, designList,this);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        rvMoving.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        rvScale.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        rvAlpha.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        recyclerView.setAdapter(adapter);
+        //Getting Instance of Volley Request Queue
+        queue = NetworkController.getInstance(this).getRequestQueue();
+        //Volley's inbuilt class to make Json array request
+        JsonArrayRequest newsReq = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
 
-        rvMoving.setAdapter(new MyAdapter(new HorizontalMovingStyle()));
-        rvScale.setAdapter(new MyAdapter(new HorizontalScaleStyle()));
-        rvAlpha.setAdapter(new MyAdapter(new HorizontalAlphaStyle()));
+                for (int i = 0; i < response.length(); i++) {
+                    try {
+
+                        JSONObject obj = response.getJSONObject(i);
+                        DesignModel feeds = new DesignModel( obj.getString("content"),obj.getString("img"));
+
+                        if (obj.getString("dep_id_fk").equals("1")){
+
+                        // adding movie to movies array
+                        designList.add(feeds);}
+
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    } finally {
+                        //Notify adapter about data changes
+                        adapter.notifyItemChanged(i);
+                    }
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.println(error.getMessage());
+            }
+        });
+        //Adding JsonArrayRequest to Request Queue
+        queue.add(newsReq);
+
     }
 
-    private class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
-        private ScrollParallaxImageView.ParallaxStyle parallaxStyle;
-
-        MyAdapter(ScrollParallaxImageView.ParallaxStyle parallaxStyle) {
-            this.parallaxStyle = parallaxStyle;
-        }
-
-        @Override
-        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-            View view = inflater.inflate(R.layout.item_media, parent, false);
-            return new ViewHolder(view);
-        }
-
-        @Override
-        public void onBindViewHolder(ViewHolder holder, int position) {
-            holder.iv.setParallaxStyles(parallaxStyle);
-            switch (position % 5) {
-                case 0 : holder.iv.setImageResource(R.drawable.poster1); break;
-                case 1 : holder.iv.setImageResource(R.drawable.poster2); break;
-                case 2 : holder.iv.setImageResource(R.drawable.img5); break;
-                case 3 : holder.iv.setImageResource(R.drawable.card3); break;
-                case 4 : holder.iv.setImageResource(R.drawable.poster2); break;
-            }
-        }
-
-        @Override
-        public int getItemCount() {
-            return 15;
-        }
-
-        class ViewHolder extends RecyclerView.ViewHolder {
-            ScrollParallaxImageView iv;
-            ViewHolder(View itemView) {
-                super(itemView);
-                iv = (ScrollParallaxImageView) itemView.findViewById(R.id.img);
-            }
-        }
-    }
 }
