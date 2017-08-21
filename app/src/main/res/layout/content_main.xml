@@ -7,7 +7,7 @@
     android:background="@color/amber_400"
     android:padding="4dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
+    tools:context=".Activites.MainActivity"
     tools:showIn="@layout/activity_idia">
 
     <android.support.v7.widget.RecyclerView

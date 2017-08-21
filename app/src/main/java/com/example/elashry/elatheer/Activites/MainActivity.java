@@ -1,4 +1,4 @@
-package com.example.elashry.elatheer;
+package com.example.elashry.elatheer.Activites;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -11,6 +11,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.elashry.elatheer.MaterialColor;
+import com.example.elashry.elatheer.R;
+import com.example.elashry.elatheer.TextDrawable;
 import com.lukedeighton.wheelview.WheelView;
 import com.lukedeighton.wheelview.adapter.WheelArrayAdapter;
 
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent i =new Intent(MainActivity.this,Services.class);
                     startActivity(i);
                 }else if (msg.equals("1")){
-                    Intent i =new Intent(MainActivity.this,Services.class);
+                    Intent i =new Intent(MainActivity.this,News.class);
                     startActivity(i);
                 }else if (msg.equals("2")){
                     Intent i =new Intent(MainActivity.this,Offer.class);

@@ -1,14 +1,17 @@
-package com.example.elashry.elatheer;
+package com.example.elashry.elatheer.Activites;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+
+import com.example.elashry.elatheer.Fragmebts.Mobile;
+import com.example.elashry.elatheer.Fragmebts.Web;
+import com.example.elashry.elatheer.Fragmebts.Webapp;
+import com.example.elashry.elatheer.R;
+import com.example.elashry.elatheer.Adapters.ViewPagerAdapter;
 
 public class Programs extends AppCompatActivity {
     private TabLayout mTab;

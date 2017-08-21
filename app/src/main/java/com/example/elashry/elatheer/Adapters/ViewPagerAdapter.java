@@ -1,4 +1,4 @@
-package com.example.elashry.elatheer;
+package com.example.elashry.elatheer.Adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

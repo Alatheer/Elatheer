@@ -1,10 +1,12 @@
-package com.example.elashry.elatheer;
+package com.example.elashry.elatheer.Activites;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.elashry.elatheer.R;
 
 public class Fahrasa extends AppCompatActivity {
 Button tasnef,head,fhrsa;

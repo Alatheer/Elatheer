@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/b5"
-    tools:context="com.example.elashry.elatheer.MainActivity">
+    tools:context="com.example.elashry.elatheer.Activites.MainActivity">
 
 
     <com.lukedeighton.wheelview.WheelView

@@ -1,4 +1,4 @@
-package com.example.elashry.elatheer;
+package com.example.elashry.elatheer.Activites;
 
 
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
+import com.example.elashry.elatheer.R;
 
 import java.util.HashMap;
 

@@ -33,7 +33,7 @@ public class TextDrawable extends Drawable {
         //String[] list = {"عروضنا", "عن الشركه", "خدمتنا", "اتصل بنا", "افكار مبتكره", "الرئيسيه"};
        // for (int i = 1; i < list.length; i++) {
        if (text.equals("1")){
-            canvas.drawText("خدمتنا", bounds.centerX() - 15f /*just a lazy attempt to centre the text*/ * text.length(), bounds.centerY() + 15f, paint);
+            canvas.drawText("الاخبار", bounds.centerX() - 15f /*just a lazy attempt to centre the text*/ * text.length(), bounds.centerY() + 15f, paint);
 
         }else if (text.equals("2")){
             canvas.drawText("عروضنا", bounds.centerX() - 15f /*just a lazy attempt to centre the text*/ * text.length(), bounds.centerY() + 15f, paint);

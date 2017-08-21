@@ -1,4 +1,4 @@
-package com.example.elashry.elatheer;
+package com.example.elashry.elatheer.Activites;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,11 +10,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.elashry.elatheer.Adapters.idiaadepter;
+import com.example.elashry.elatheer.R;
+import com.example.elashry.elatheer.RealPathUtil;
+import com.example.elashry.elatheer.Models.idieslist;
 
 import java.io.File;
 import java.io.FileNotFoundException;

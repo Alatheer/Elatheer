@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/Card"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:background="#efefef"
+    cardview:cardCornerRadius="3dp"
+    cardview:cardElevation="3dp"
+    cardview:cardUseCompatPadding="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/amber_400">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="50%  علي عروضنا في تصاميم  "
+        android:textColor="@color/amber_400"
+        android:textSize="20dp"
+        android:background="@drawable/blubuttom"
+        android:textStyle="bold"/>
+<TextView
+    android:id="@+id/date"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="24_8_2017"
+    android:layout_margin="10dp"/>
+    <TextView
+        android:id="@+id/content"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="16dp"
+        android:textColor="@color/colorPrimary"
+        android:text=" الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول الخبر الخاص الاول ال"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>

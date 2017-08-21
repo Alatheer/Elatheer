@@ -1,4 +1,4 @@
-package com.example.elashry.elatheer;
+package com.example.elashry.elatheer.Models;
 
 public class idieslist {
     public String movieName,movieRate,movieStory ;

@@ -1,14 +1,15 @@
-package com.example.elashry.elatheer;
+package com.example.elashry.elatheer.Activites;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class CallUs extends AppCompatActivity {
+import com.example.elashry.elatheer.R;
+
+public class WhyAtheer extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_call_us);
+        setContentView(R.layout.activity_why_atheer);
     }
-
 }
