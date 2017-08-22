@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             app:colorNormal="#F44336"
             app:colorPressed="#E53935"
-            app:icon="@drawable/desigen"/>
+            app:icon="@drawable/design"/>
 
         <com.imangazaliev.circlemenu.CircleMenuButton
             android:id="@+id/camera"
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             app:colorNormal="#9C27B0"
             app:colorPressed="#8E24AA"
-            app:icon="@drawable/ic_place"/>
+            app:icon="@drawable/camera"/>
 
         <com.imangazaliev.circlemenu.CircleMenuButton
             android:id="@+id/fhrsa"
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             app:colorNormal="#FF9800"
             app:colorPressed="#FB8C00"
-            app:icon="@drawable/ic_edit"/>
+            app:icon="@drawable/fhrsa"/>
     </com.imangazaliev.circlemenu.CircleMenu>
 
 </RelativeLayout>
