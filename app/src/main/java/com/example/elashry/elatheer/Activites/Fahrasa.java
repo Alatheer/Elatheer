@@ -1,5 +1,8 @@
 package com.example.elashry.elatheer.Activites;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -128,6 +131,26 @@ Button tasnef,head,fhrsa;
             }
         });
 
+    }
+
+    private void Network_aviliablef()
+    {
+        ConnectivityManager cm = (ConnectivityManager)Fahrasa.this.getSystemService(Context.CONNECTIVITY_SERVICE);
+        boolean wifi = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnectedOrConnecting();
+        boolean data = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).isConnectedOrConnecting();
+
+        if (!wifi && !data)
+        {
+            startActivity(new Intent(this, Check_Internet_connection.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+
+        }
+        else {
+        }
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        Network_aviliablef();
     }
 }
 

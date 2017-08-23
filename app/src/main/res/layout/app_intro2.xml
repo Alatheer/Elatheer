@@ -33,7 +33,7 @@
             android:layout_gravity="center"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            android:src="@drawable/eng2" />
+            android:src="@drawable/design2" />
     </LinearLayout>
 
     <TextView

@@ -29,6 +29,10 @@ public class Check_Internet_connection extends AppCompatActivity {
             public void onClick(View view) {
                 Network_aviliable();
                 Network_aviliablen();
+                Network_aviliabled();
+                Network_aviliablef();
+
+
             }
         });
     }
@@ -74,6 +78,20 @@ public class Check_Internet_connection extends AppCompatActivity {
         }
         else {
             startActivity(new Intent(Check_Internet_connection.this,media.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        }
+    }
+    private void Network_aviliablef()
+    {
+        ConnectivityManager cm = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        boolean wifi = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnectedOrConnecting();
+        boolean data = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).isConnectedOrConnecting();
+
+        if (!wifi && !data)
+        {
+            Toast.makeText(this, "تحقق من الاتصال بالانترنت", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            startActivity(new Intent(Check_Internet_connection.this,Fahrasa.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         }
     }
     @Override

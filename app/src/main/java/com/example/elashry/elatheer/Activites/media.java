@@ -80,7 +80,7 @@ public class media extends AppCompatActivity {
         queue.add(newsReq);
 
     }
-    private void Network_aviliablen()
+    private void Network_aviliabled()
     {
         ConnectivityManager cm = (ConnectivityManager)media.this.getSystemService(Context.CONNECTIVITY_SERVICE);
         boolean wifi = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnectedOrConnecting();
@@ -97,7 +97,7 @@ public class media extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        Network_aviliablen();
+        Network_aviliabled();
     }
 
 }
