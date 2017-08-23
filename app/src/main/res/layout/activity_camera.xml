@@ -77,7 +77,7 @@
             android:layout_margin="5dp"
 
             android:layout_width="0dp"
-            android:text="حجز"
+            android:text="@string/book"
             android:textColor="@color/amber_400"
             android:textSize="25dp"
             android:background="@drawable/blubuttom"
@@ -87,7 +87,7 @@
             android:layout_margin="5dp"
 
             android:layout_width="0dp" android:layout_weight="1"
-            android:text="تفاصيل"
+            android:text="@string/details"
             android:textColor="@color/amber_400"
             android:textSize="25dp"
             android:background="@drawable/blubuttom"

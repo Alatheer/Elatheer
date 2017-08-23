@@ -17,7 +17,7 @@
         android:background="@color/amber_400"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true">
+        >
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
 
-            android:text="اتصل بنا"
+            android:text="@string/callus"
             android:textColor="@color/amber_400"
             android:background="@drawable/blubuttom"
             android:textSize="20dp"
@@ -128,7 +128,7 @@
                         android:textColor="@color/amber_400"
                         android:textSize="18sp"
                         android:layout_gravity="center"
-                        android:text="ارسال"
+                        android:text="@string/send"
 
                         android:background="@drawable/btnsend"
                       />
@@ -146,20 +146,23 @@
 
 
             <ImageView
+                android:id="@+id/facebook"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/facebook"
+                android:src="@drawable/f1"
                 android:layout_margin="10dp"/>
             <ImageView
+                android:id="@+id/whats"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/twitter"/>
+                android:src="@drawable/whatsapp"/>
             <ImageView
+                android:id="@+id/gmail"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/chat"/>
+                android:src="@drawable/gmail"/>
 
         </LinearLayout>
 

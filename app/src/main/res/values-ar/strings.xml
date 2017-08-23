@@ -11,5 +11,27 @@
     <string name="phone">الهاتف</string>
     <string name="message">اترك رسالتك</string>
 
+    <string name="send">ارسال</string>
+    <string name="callus">اتصل بنا</string>
+
+    <string name="PutIdia">ضع عنوان لفكرتك</string>
+    <string name="eshrahIdia">اشرح فكرتك ....</string>
+    <string name="UploadImage">حمل الصوره</string>
+    <string name="addIdea">اضافة فكرة جديده</string>
+    <string name="someIdea">بعض الافكار</string>
+
+    <string name="book">حجز</string>
+    <string name="details">تفاصيل</string>
+
+    <string name="intro1">screen1</string>
+    <string name="intro2">screen1</string>
+    <string name="intro3">screen1</string>
+    <string name="intro4">screen1</string>
+    <string name="intro5">screen1</string>
+    <string name="home1">الرئيسيه</string>
+    <string name="home2">الرئيسيه</string>
+    <string name="home3">الرئيسيه</string>
+    <string name="home4">الرئيسيه</string>
+    <string name="home5">الرئيسيه</string>
 
 </resources>

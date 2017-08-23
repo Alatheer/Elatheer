@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onWheelItemClick(WheelView parent, int position, boolean isSelected) {
                 String msg = String.valueOf(position);
-                Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
                 if (msg.equals("0")){
                     Intent i =new Intent(MainActivity.this,Services.class);
                     startActivity(i);

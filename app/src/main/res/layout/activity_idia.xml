@@ -19,7 +19,7 @@
         android:layout_marginTop="5dp"
         android:background="@drawable/blubuttom"
         android:paddingTop="5dp"
-        android:text="بعض الافكار"
+        android:text="@string/someIdea"
         android:textStyle="bold"
         android:textColor="@color/amber_400"
         android:padding="10dp"/>
@@ -34,7 +34,7 @@
         android:layout_marginTop="5dp"
         android:background="@drawable/blubuttom"
         android:paddingTop="5dp"
-        android:text="اضافة فكرة جديده"
+        android:text="@string/addIdea"
         android:textStyle="bold"
         android:textColor="@color/amber_400"
         android:padding="10dp"/>
@@ -101,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/text"
-                    android:hint="ضع عنوان لفكرتك"
+                    android:hint="@string/PutIdia"
                     android:paddingBottom="5dp"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
@@ -116,7 +116,7 @@
                     android:minLines="3"
                     android:textAlignment="gravity"
                     android:gravity="top"
-                    android:hint="اشرح فكرتك ...."
+                    android:hint="@string/eshrahIdia"
                     android:textColorHint="@color/colorPrimary"
                     android:background="@drawable/text"/>
 
@@ -134,7 +134,7 @@
                     android:textColor="@color/amber_400"
                     android:textSize="18sp"
                     android:layout_gravity="right"
-                    android:text="UPlead Image"
+                    android:text="@string/UploadImage"
 
                     android:background="@drawable/btnsend"
                     />

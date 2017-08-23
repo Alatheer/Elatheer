@@ -28,6 +28,7 @@ public class Check_Internet_connection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Network_aviliable();
+                Network_aviliablen();
             }
         });
     }
@@ -47,10 +48,37 @@ public class Check_Internet_connection extends AppCompatActivity {
             startActivity(new Intent(Check_Internet_connection.this,Offer.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         }
     }
+    private void Network_aviliablen()
+    {
+        ConnectivityManager cm = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        boolean wifi = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnectedOrConnecting();
+        boolean data = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).isConnectedOrConnecting();
 
+        if (!wifi && !data)
+        {
+            Toast.makeText(this, "تحقق من الاتصال بالانترنت", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            startActivity(new Intent(Check_Internet_connection.this,News.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        }
+    }
+    private void Network_aviliabled()
+    {
+        ConnectivityManager cm = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        boolean wifi = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnectedOrConnecting();
+        boolean data = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).isConnectedOrConnecting();
+
+        if (!wifi && !data)
+        {
+            Toast.makeText(this, "تحقق من الاتصال بالانترنت", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            startActivity(new Intent(Check_Internet_connection.this,media.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        }
+    }
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(Check_Internet_connection.this,Services.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        startActivity(new Intent(Check_Internet_connection.this,MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
     }
 }
