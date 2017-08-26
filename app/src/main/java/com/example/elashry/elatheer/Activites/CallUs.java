@@ -1,5 +1,6 @@
 package com.example.elashry.elatheer.Activites;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -7,6 +8,7 @@ import android.net.MailTo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.PhoneNumberUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -41,7 +43,12 @@ public class CallUs extends AppCompatActivity {
             public void onClick(View view) {
 
                // openWhatsApp();
-                onClickWhatsApp();
+              //  onClickWhatsApp();
+
+                Intent sendIntent = new Intent("android.intent.action.MAIN");
+                sendIntent.setComponent(new ComponentName("com.whatsapp","com.whatsapp.Conversation"));
+                sendIntent.putExtra("jid", PhoneNumberUtils.stripSeparators("01091121486")+"@s.whatsapp.net");
+                startActivity(sendIntent);
             }
         });
 
