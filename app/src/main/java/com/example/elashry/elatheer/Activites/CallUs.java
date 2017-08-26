@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.PhoneNumberUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -42,8 +43,7 @@ public class CallUs extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-               // openWhatsApp();
-              //  onClickWhatsApp();
+
 
                 Intent sendIntent = new Intent("android.intent.action.MAIN");
                 sendIntent.setComponent(new ComponentName("com.whatsapp","com.whatsapp.Conversation"));
@@ -70,69 +70,33 @@ sendEmail();            }
 
     }
 
-    private void openWhatsApp() {
-        String smsNumber = "01091121486"; //without '+'
-        try {
-            Intent sendIntent = new Intent("android.intent.action.MAIN");
-            //sendIntent.setComponent(new ComponentName("com.whatsapp", "com.whatsapp.Conversation"));
-            sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.setType("text/plain");
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
-            sendIntent.putExtra("jid", smsNumber + "@s.whatsapp.net"); //phone number without "+" prefix
-            sendIntent.setPackage("com.whatsapp");
-            startActivity(sendIntent);
-        } catch (Exception e) {
-            Toast.makeText(this, "Error/n" + e.toString(), Toast.LENGTH_SHORT).show();
-        }
-    }
 
-    public void onClickWhatsApp() {
-        String smsNumber = "01091121486"; //without '+'
 
-        PackageManager pm=getPackageManager();
-        try {
 
-            Intent waIntent = new Intent(Intent.ACTION_SEND);
-            waIntent.setType("text/plain");
-            String text = "YOUR TEXT HERE";
-
-            PackageInfo info=pm.getPackageInfo("com.whatsapp", PackageManager.GET_META_DATA);
-            //Check if package exists or not. If not then code
-            //in catch block will be called
-            waIntent.setPackage("com.whatsapp");
-
-            waIntent.putExtra(Intent.EXTRA_TEXT, text);
-            waIntent.putExtra("jid", smsNumber + "@s.whatsapp.net"); //phone number without "+" prefix
-
-            startActivity(Intent.createChooser(waIntent, "Share with"));
-
-        } catch (PackageManager.NameNotFoundException e) {
-            Toast.makeText(this, "WhatsApp not Installed", Toast.LENGTH_SHORT)
-                    .show();
-        }
-
-    }
 
     protected void sendEmail() {
+        Log.i("Send email", "");
+
+        String[] TO = {"it.alatheertech@gmail.com","alatheertech@gmail.com","hr2.alatheertech@gmail.com"};
+        String[] CC = {"alatheertech@gmail.com"};
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.setData(Uri.parse("mailto:"));
+        emailIntent.setType("text/plain");
 
 
-        Intent email = new Intent(Intent.ACTION_SEND, Uri.parse("mailto:it.alatheertech@gmail.com"));
-
-        email.setType("message/rfc822");
-
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+        emailIntent.putExtra(Intent.EXTRA_CC, CC);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message goes here");
 
         try {
-
-            startActivity(Intent.createChooser(email, "Choose an email client from..."));
-
+            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+            finish();
+            Log.i("Finish sending email..", "");
         } catch (android.content.ActivityNotFoundException ex) {
-
-            Toast.makeText(CallUs.this, "No email client installed.",
-
-                    Toast.LENGTH_LONG).show();
-
+            Toast.makeText(CallUs.this,
+                    "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
-
     }
 
 

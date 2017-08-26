@@ -28,13 +28,13 @@ private SliderLayout mDemoSlider;
         mDemoSlider = (SliderLayout) findViewById(R.id.slider);
 
         HashMap<String, Integer> file_maps = new HashMap<String, Integer>();
-        file_maps.put("كاميرا 1", R.drawable.eng1);
-        file_maps.put("كاميرا 2", R.drawable.eng2);
-        file_maps.put("كاميرا 3", R.drawable.eng3);
-        file_maps.put("كاميرا 4", R.drawable.eng1);
-        file_maps.put("كاميرا 5", R.drawable.eng2);
-        file_maps.put("كاميرا 6", R.drawable.eng2);
-        file_maps.put("كاميرا 7", R.drawable.eng3);
+        file_maps.put("كاميرات مراقبه", R.drawable.ca);
+        file_maps.put("تطبيقات موبيل ", R.drawable.mobile);
+        file_maps.put("كاميرا ثلاثيه", R.drawable.ca2);
+        file_maps.put("تسويق منتجات", R.drawable.s1);
+        file_maps.put("تصميم لوجهات واعلانات", R.drawable.photo);
+        file_maps.put("تصميم مواقع", R.drawable.ca3);
+        file_maps.put("تصميم بوسترات ومنيوهات", R.drawable.menu1);
 
 
         for (String name : file_maps.keySet()) {
