@@ -1,8 +1,11 @@
 package com.example.elashry.elatheer.Activites;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
@@ -16,16 +19,59 @@ import java.util.HashMap;
 public class Camera extends AppCompatActivity implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
 
 private SliderLayout mDemoSlider;
+    Button btnregister1, btnregister2, btnregister3, btnregister4, btnregister5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
         init_View();
+        btnregister1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(Camera.this,CallUs.class);
+                startActivity(i);
+            }
+        });
+        btnregister2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(Camera.this,CallUs.class);
+                startActivity(i);
+            }
+        });
+        btnregister3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(Camera.this,CallUs.class);
+                startActivity(i);
+            }
+        });
+        btnregister4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(Camera.this,CallUs.class);
+                startActivity(i);
+            }
+        });
+        btnregister5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(Camera.this,CallUs.class);
+                startActivity(i);
+            }
+        });
+
     }
+
 
     private void init_View() {
         mDemoSlider = (SliderLayout) findViewById(R.id.slider);
+        btnregister1= (Button) findViewById(R.id.b1);
+        btnregister2= (Button) findViewById(R.id.b2);
+        btnregister3= (Button) findViewById(R.id.b3);
+        btnregister4= (Button) findViewById(R.id.b4);
+        btnregister5= (Button) findViewById(R.id.b5);
 
         HashMap<String, Integer> file_maps = new HashMap<String, Integer>();
         file_maps.put("كاميرات مراقبه", R.drawable.ca);

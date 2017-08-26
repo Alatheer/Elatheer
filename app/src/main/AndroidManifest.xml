@@ -22,6 +22,7 @@
         tools:replace="android:supportsRtl">
         <activity
             android:name=".Activites.Splach"
+            android:theme="@style/AppTheme.NoActionBar"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,7 +48,7 @@
         <activity android:name=".Activites.News" />
         <activity android:name=".Activites.Check_Internet_connection" />
         <activity android:name=".Activites.Details_News"></activity>
-        <activity android:name=".Activites.MainActivity"   android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activites.MainActivity"  />
         <activity android:name=".Activites.MyIntro"   android:theme="@style/AppTheme.NoActionBar" />
 
     </application>
