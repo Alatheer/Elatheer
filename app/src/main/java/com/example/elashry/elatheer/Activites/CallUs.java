@@ -1,6 +1,8 @@
 package com.example.elashry.elatheer.Activites;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.MailTo;
 import android.net.Uri;
 import android.os.Bundle;
@@ -38,7 +40,8 @@ public class CallUs extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                openWhatsApp();
+               // openWhatsApp();
+                onClickWhatsApp();
             }
         });
 
@@ -74,6 +77,33 @@ sendEmail();            }
         } catch (Exception e) {
             Toast.makeText(this, "Error/n" + e.toString(), Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void onClickWhatsApp() {
+        String smsNumber = "01091121486"; //without '+'
+
+        PackageManager pm=getPackageManager();
+        try {
+
+            Intent waIntent = new Intent(Intent.ACTION_SEND);
+            waIntent.setType("text/plain");
+            String text = "YOUR TEXT HERE";
+
+            PackageInfo info=pm.getPackageInfo("com.whatsapp", PackageManager.GET_META_DATA);
+            //Check if package exists or not. If not then code
+            //in catch block will be called
+            waIntent.setPackage("com.whatsapp");
+
+            waIntent.putExtra(Intent.EXTRA_TEXT, text);
+            waIntent.putExtra("jid", smsNumber + "@s.whatsapp.net"); //phone number without "+" prefix
+
+            startActivity(Intent.createChooser(waIntent, "Share with"));
+
+        } catch (PackageManager.NameNotFoundException e) {
+            Toast.makeText(this, "WhatsApp not Installed", Toast.LENGTH_SHORT)
+                    .show();
+        }
+
     }
 
     protected void sendEmail() {

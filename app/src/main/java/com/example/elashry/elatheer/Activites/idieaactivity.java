@@ -125,7 +125,7 @@ public class idieaactivity extends AppCompatActivity {
 
 //        this.t1.setText("Build.VERSION.SDK_INT: "+sdk);
         this.t2.setText("URI Path: "+uriPath);
-        this.t3.setText("Real Path: "+realPath);
+        this.t3.setText("Real Path: ");
 
         Uri uriFromPath = Uri.fromFile(new File(realPath));
 
