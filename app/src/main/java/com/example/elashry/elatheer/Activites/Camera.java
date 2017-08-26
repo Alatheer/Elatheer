@@ -53,7 +53,7 @@ private SliderLayout mDemoSlider;
         mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
         mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
         mDemoSlider.setCustomAnimation(new DescriptionAnimation());
-        mDemoSlider.setDuration(3000);
+        mDemoSlider.setDuration(2000);
         mDemoSlider.addOnPageChangeListener(this);
 
 

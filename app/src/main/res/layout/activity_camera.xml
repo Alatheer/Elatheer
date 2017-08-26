@@ -62,7 +62,7 @@
     <com.github.siyamed.shapeimageview.RoundedImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/pic4"
+        android:src="@drawable/ca2"
         app:siRadius="6dp"
         app:siBorderWidth="4dp"
         app:siBorderColor="@color/colorPrimary"
@@ -101,7 +101,7 @@
         <com.github.siyamed.shapeimageview.RoundedImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/pic4"
+            android:src="@drawable/photo"
             app:siRadius="6dp"
             app:siBorderWidth="4dp"
             app:siBorderColor="@color/colorPrimary"
@@ -131,6 +131,44 @@
                 android:layout_height="wrap_content" /></LinearLayout>
     </FrameLayout>
     <FrameLayout
+    android:layout_margin="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/ca3"
+        app:siRadius="6dp"
+        app:siBorderWidth="4dp"
+        app:siBorderColor="@color/colorPrimary"
+        app:siSquare="false"/>
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:text="@string/book"
+            android:textColor="@color/amber_400"
+            android:textSize="25dp"
+            android:background="@drawable/blubuttom"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_margin="5dp"
+            android:textColor="@color/amber_400"
+            android:textSize="25dp"
+            android:background="@drawable/blubuttom"
+            android:layout_width="0dp" android:layout_weight="1"
+            android:text="@string/details"
+            android:layout_height="wrap_content" /></LinearLayout>
+</FrameLayout>
+
+    <FrameLayout
         android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -138,7 +176,44 @@
         <com.github.siyamed.shapeimageview.RoundedImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/pic4"
+            android:src="@drawable/s1"
+            app:siRadius="6dp"
+            app:siBorderWidth="4dp"
+            app:siBorderColor="@color/colorPrimary"
+            app:siSquare="false"/>
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_margin="5dp"
+                android:layout_width="0dp"
+                android:text="@string/book"
+                android:textColor="@color/amber_400"
+                android:textSize="25dp"
+                android:background="@drawable/blubuttom"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_margin="5dp"
+                android:textColor="@color/amber_400"
+                android:textSize="25dp"
+                android:background="@drawable/blubuttom"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:text="@string/details"
+                android:layout_height="wrap_content" /></LinearLayout>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/mobile"
             app:siRadius="6dp"
             app:siBorderWidth="4dp"
             app:siBorderColor="@color/colorPrimary"
