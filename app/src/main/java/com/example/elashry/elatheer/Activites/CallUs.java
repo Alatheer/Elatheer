@@ -175,7 +175,7 @@ sendEmail();            }
     {
 
         StringRequest strReq = new StringRequest(Request.Method.POST,
-                " ", new Response.Listener<String>() {
+                "https://alatheertech.com/api/contact", new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {

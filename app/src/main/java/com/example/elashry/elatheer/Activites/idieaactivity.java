@@ -200,7 +200,7 @@ public class idieaactivity extends AppCompatActivity {
     {
 
         StringRequest strReq = new StringRequest(Request.Method.POST,
-                " ", new Response.Listener<String>() {
+                "https://alatheertech.com/api/idea", new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
