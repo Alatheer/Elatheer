@@ -230,10 +230,10 @@ sendEmail();            }
             protected Map<String, String> getParams() {
                 // Posting params to register url
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("client_name",c_name);
-                params.put("client_phone",c_phone);
-                params.put("client_mail",c_mail);
-                params.put("client_message",c_message);
+                params.put("name",c_name);
+                params.put("phone",c_phone);
+                params.put("email",c_mail);
+                params.put("msg",c_message);
                 return params;
             }
 
