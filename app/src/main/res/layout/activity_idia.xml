@@ -94,6 +94,20 @@
                     android:paddingRight="5dp"
                     android:paddingTop="5dp"
                     android:textColorHint="@color/colorPrimary" />
+                <EditText
+                    android:id="@+id/cmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/text"
+                    android:hint="@string/mail"
+
+                    android:paddingBottom="5dp"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:textColorHint="@color/colorPrimary" />
 
                 <EditText
                     android:id="@+id/idea_title"
@@ -120,6 +134,7 @@
                     android:textColorHint="@color/colorPrimary"
                     android:background="@drawable/text"/>
 
+
 <LinearLayout
     android:layout_marginTop="16dp"
 
@@ -133,7 +148,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/amber_400"
                     android:textSize="18sp"
-                    android:onClick="send"
+                    android:onClick="registerOrder"
                     android:layout_gravity="right"
                     android:text="@string/send"
 

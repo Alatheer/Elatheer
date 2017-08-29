@@ -50,7 +50,7 @@ public class idieaactivity extends AppCompatActivity {
     Button b;
     TextView t1,t2,t3;
     public static final int GET_FROM_GALLERY = 3;
-    EditText cname,cphone,idea_title,idea_explain;
+    EditText cname,cphone,cmail,idea_title,idea_explain;
     AlertDialog.Builder mdialog;
     ProgressDialog progressDialog;
     @Override
@@ -61,6 +61,7 @@ public class idieaactivity extends AppCompatActivity {
 
         cname= (EditText) findViewById(R.id.cname);
         cphone = (EditText) findViewById(R.id.cname);
+        cmail = (EditText) findViewById(R.id.cmail);
         idea_title= (EditText) findViewById(R.id.idea_title);
         idea_explain= (EditText) findViewById(R.id.idea_explain);
 
@@ -94,8 +95,6 @@ public class idieaactivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         idiaadepter adapter = new idiaadepter(movies);
         recyclerView.setAdapter(adapter);
-
-
 
 
      //   b = (Button) findViewById(R.id.b1);
@@ -139,6 +138,7 @@ public class idieaactivity extends AppCompatActivity {
     public void registerOrder(View view) {
         String client_name          = cname.getText().toString();
         String client_phone         = cphone.getText().toString();
+        String client_mail        = cmail.getText().toString();
         String ititle      = idea_title.getText().toString();
         String iexplain          = idea_explain.getText().toString();
 
@@ -154,14 +154,24 @@ public class idieaactivity extends AppCompatActivity {
             mdialog.setMessage("تاكد من ادخال رقم المحمول");
             mdialog.show();
         }
-        else if (!client_phone.matches("^(010|011|012)[0-9]{8}$"))
+     /*   else if (!client_phone.matches("^(010|011|012)[0-9]{8}$"))
         {
             mdialog.setMessage("تاكد من ادخال رقم المحمول بشكل صحيح");
             mdialog.show();
+        }*/
+        else if (TextUtils.isEmpty(client_mail))
+        {
+            mdialog.setMessage("تاكد من ادخال رقم الايميل");
+            mdialog.show();
         }
+     /*   else if (!client_mail.matches("[a-zA-Z0-9._-]+@[a-z]+.[a-z]+"))
+        {
+            mdialog.setMessage("تاكد من ادخال رقم الايميل بشكل صحيح");
+            mdialog.show();
+        }*/
         else if (TextUtils.isEmpty(ititle))
         {
-            mdialog.setMessage("تاكد من ادخال الايميل ");
+            mdialog.setMessage("تاكد من ادخال hguk,hk ");
             mdialog.show();
         }
         else if (TextUtils.isEmpty(iexplain))
@@ -179,8 +189,7 @@ public class idieaactivity extends AppCompatActivity {
             {
                 progressDialog.setMessage("sending "+ cname.getText().toString()+" data to server");
                 progressDialog.show();
-                String date = new SimpleDateFormat("EEE ,dd MMM yyyy HH:mm aa", new Locale("ar","SA")).format(Calendar.getInstance().getTime());
-                Add_call(client_name,client_phone,ititle,iexplain);
+                Add_call(client_name,client_phone,client_mail,ititle,iexplain);
             }
             else
             {
@@ -196,7 +205,7 @@ public class idieaactivity extends AppCompatActivity {
             }
         }
     }
-    private void Add_call(final String c_name, final String c_phone, final String idea_title, final String idea_explain)
+    private void Add_call(final String c_name, final String c_phone,final String c_mail, final String idea_title, final String idea_explain)
     {
 
         StringRequest strReq = new StringRequest(Request.Method.POST,
@@ -246,8 +255,17 @@ public class idieaactivity extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 progressDialog.dismiss();
                 Toast.makeText(getApplicationContext(),
-                        error.getMessage()+"mmmm", Toast.LENGTH_LONG).show();
+                        error.getMessage(), Toast.LENGTH_LONG).show();
+                Log.e("MMM",error.getMessage().toString());
 
+                mdialog.setMessage(error.getMessage() );
+                mdialog.setNegativeButton("موافق", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(idieaactivity.this, "موافق", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                mdialog.show();
             }
         }) {
 
@@ -257,6 +275,7 @@ public class idieaactivity extends AppCompatActivity {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("client_name",c_name);
                 params.put("client_phone",c_phone);
+                params.put("client_mail",c_mail);
                 params.put("idea_title",idea_title);
                 params.put("idea_explain",idea_explain);
                 return params;
