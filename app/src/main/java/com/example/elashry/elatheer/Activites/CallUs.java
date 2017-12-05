@@ -6,15 +6,11 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
-import android.net.MailTo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.PhoneNumberUtils;
-
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -175,7 +171,7 @@ sendEmail();            }
     {
 
         StringRequest strReq = new StringRequest(Request.Method.POST,
-                "https://alatheertech.com/api/contact", new Response.Listener<String>() {
+                "http://alatheertech.com/api/contact", new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
@@ -272,6 +268,8 @@ sendEmail();            }
 
         String[] TO = {"it.alatheertech@gmail.com","alatheertech@gmail.com","hr2.alatheertech@gmail.com"};
         String[] CC = {"alatheertech@gmail.com"};
+
+
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.setData(Uri.parse("mailto:"));
         emailIntent.setType("text/plain");

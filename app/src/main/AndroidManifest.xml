@@ -42,6 +42,7 @@
         <activity android:name=".Activites.Camera" />
         <activity android:name=".Activites.media" />
         <activity android:name=".Activites.Fahrasa" />
+
         <activity android:name=".idia" />
         <activity android:name=".Activites.idieaactivity" />
         <activity android:name=".Activites.WhyAtheer" />
