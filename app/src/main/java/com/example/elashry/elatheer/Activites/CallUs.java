@@ -28,11 +28,14 @@ import com.example.elashry.elatheer.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+
+import javax.net.ssl.SSLContext;
 
 public class CallUs extends AppCompatActivity {
     ImageView face, whats, gmail;
@@ -169,6 +172,11 @@ sendEmail();            }
     }
     private void Add_call(final String c_name, final String c_phone, final String c_mail, final String c_message)
     {
+        try {
+            SSLContext.getInstance("TLSv1.2");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
 
         StringRequest strReq = new StringRequest(Request.Method.POST,
                 "http://alatheertech.com/api/contact", new Response.Listener<String>() {
@@ -289,6 +297,20 @@ sendEmail();            }
                     "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
     }
+    /*public static void initializeSSLContext(Context mContext){
+        try {
+            SSLContext.getInstance("TLSv1.2");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        try {
+            ProviderInstaller.installIfNeeded(mContext.getApplicationContext());
+        } catch (GooglePlayServicesRepairableException e) {
+            e.printStackTrace();
+        } catch (GooglePlayServicesNotAvailableException e) {
+            e.printStackTrace();
+        }
+    }*/
 
 
 
